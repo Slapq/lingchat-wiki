@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Theme Colors */
+  --vp-c-brand-1: #0369a1;
+  --vp-c-brand-2: #0284c7;
+  --vp-c-brand-3: #0369a1;
+  --vp-c-brand-soft: rgba(56, 189, 248, 0.14);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #0284c7 0%, #6366f1 40%, #ec4899 85%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(56, 189, 248, 0.3) 0%, rgba(99, 102, 241, 0.25) 50%, rgba(236, 72, 153, 0.2) 100%);
+  --vp-home-hero-image-filter: blur(52px);
+
+  --vp-c-bg-glass: rgba(255, 255, 255, 0.82);
+  --vp-c-bg-card: rgba(255, 255, 255, 0.65);
+  --vp-shadow-glow: 0 10px 30px -10px rgba(56, 189, 248, 0.25);
+}
+
+:root.dark {
+  --vp-c-brand-1: #38bdf8;
+  --vp-c-brand-2: #0ea5e9;
+  --vp-c-brand-3: #0284c7;
+  --vp-c-brand-soft: rgba(56, 189, 248, 0.18);
+
+  --vp-home-hero-name-background: linear-gradient(135deg, #38bdf8 0%, #818cf8 45%, #f472b6 90%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(56, 189, 248, 0.35) 0%, rgba(129, 140, 248, 0.3) 50%, rgba(244, 114, 182, 0.22) 100%);
+  --vp-home-hero-image-filter: blur(64px);
+
+  --vp-c-bg-glass: rgba(15, 23, 42, 0.82);
+  --vp-c-bg-card: rgba(30, 41, 59, 0.6);
+  --vp-shadow-glow: 0 12px 36px -8px rgba(56, 189, 248, 0.35);
+}
+
+
+/* Base smoothing */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-attachment: scroll;
+}
+
+/* The page background stays scrollable; no fixed decorative layer is used. */
+
+/* Translucent Glass Header Nav */
+.VPNav {
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  background-color: var(--vp-c-bg-glass) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Translucent Glass Sidebar */
+.VPSidebar {
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  background-color: var(--vp-c-bg-glass) !important;
+}
+
+/* Hero Section Enhancements */
+.VPHero .name {
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 2px 10px rgba(56, 189, 248, 0.25));
+}
+
+.VPHero .image-container {
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.VPHero .image-container:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.03);
+  filter: drop-shadow(0 15px 30px rgba(56, 189, 248, 0.3));
+}
+
+/* Feature Cards on Homepage */
+.VPFeature {
+  background: var(--vp-c-bg-card) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(12px) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  transform: translateY(-6px) scale(1.01) !important;
+  box-shadow: var(--vp-shadow-glow) !important;
+}
+
+.VPFeature .icon {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(129, 140, 248, 0.15)) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 14px !important;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Document content styles */
+.vp-doc h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  color: var(--vp-c-text-1);
+  margin-bottom: 1.5rem;
+}
+
+.vp-doc h2 {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.vp-doc table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1.75rem 0;
+  border-radius: 14px;
+  border: 1px solid var(--vp-c-divider);
+  width: max-content;
+  min-width: 100%;
+  background-color: var(--vp-c-bg-card);
+  backdrop-filter: blur(8px);
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc td {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc tr:last-child td {
+  border-bottom: none;
+}
+
+.vp-doc tr:hover td {
+  background-color: var(--vp-c-brand-soft);
+}
+
+/* Code block glowing accents */
+.vp-doc div[class*='language-'] {
+  border-radius: 16px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.vp-doc div[class*='language-']:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-glow);
+}
+
+/* Callouts / Custom Container */
+.custom-block {
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Button & Action Links */
+.VPButton.brand {
+  background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%) !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px -3px rgba(2, 132, 199, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px -4px rgba(2, 132, 199, 0.6) !important;
+}
+
+.VPButton.alt {
+  border-radius: 12px !important;
+  backdrop-filter: blur(8px) !important;
+  transition: all 0.25s ease !important;
+}
+
+.VPButton.alt:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+@media (max-width: 959px) {
+  .VPHero .image-container {
+    transform: none;
+  }
+
+  .VPHero .image-container:hover {
+    transform: none;
+    filter: none;
+  }
+
+  .VPSidebar {
+    backdrop-filter: none !important;
+  }
+}
+
+@media print {
+  .vp-doc h1 {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: #111827;
+  }
+}

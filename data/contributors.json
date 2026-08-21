@@ -1,0 +1,12 @@
+[
+  {"name":"诺一钦灵","role":"项目创始人 & 核心全栈架构","tag":"Founder","description":"LingChat 的创始开发者，主持系统全景架构设计、UI 视觉原画与核心功能落地。","link":"https://github.com/SlimeBoyOwO","avatar":"/images/qinling-avatar.png"},
+  {"name":"风雪","role":"剧情策划 & 记忆顾问","tag":"Core Lead","description":"提供角色设定、羁绊剧本与灵感创作。","link":"https://github.com/T-Auto","avatar":"/images/fengxue.png"},
+  {"name":"雅诺狐","role":"Wiki 架构 & 前端协同","tag":"Wiki Master","description":"负责项目文档梳理与前端功能开发。","link":"https://blog.foxnature.net/","avatar":"https://github.com/foxnature.png"},
+  {"name":"影空","role":"核心后端架构 & 编译发布","tag":"Core Backend","description":"负责跨平台编译工作流与核心系统后端重构。","link":"https://github.com/shadow01a","avatar":"https://github.com/shadow01a.png"},
+  {"name":"PL","role":"后端架构师 & 代码审计","tag":"Architect","description":"指导系统解耦演进与核心通信机制。","link":"https://github.com/0x00-pl","avatar":"https://github.com/0x00-pl.png"},
+  {"name":"FlameTN7","role":"后端与剧本编辑器开发","tag":"Feature Lead","description":"实装剧本编辑器与多项关键交互。","link":"https://github.com/FlameTN7","avatar":"https://github.com/FlameTN7.png"},
+  {"name":"454545_","role":"安卓端移植 & 内置 TTS","tag":"Android Lead","description":"主导 LingChat 安卓端移植与本地语音引擎落地。","link":"https://github.com/lxdzh13","avatar":"https://github.com/lxdzh13.png"},
+  {"name":"维克扣扣","role":"服务器开发 / 技术顾问","tag":"Advisor","description":"提供服务器架构支持与生态联调建议。","link":"https://github.com/Vickko","avatar":"https://github.com/Vickko.png"},
+  {"name":"七辰","role":"UI 视觉设计协作","tag":"Visual Design","description":"协助绘制界面素材与角色差分立绘。","link":"https://qichen.ink","avatar":"/images/xiaoqinling.png"},
+  {"name":"开源社区贡献者","role":"代码、测试与反馈","tag":"Community","description":"感谢所有提交 Issue、PR 与反馈的伙伴。","avatar":"/images/logo.png"}
+]
