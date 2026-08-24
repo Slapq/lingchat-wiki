@@ -1,34 +1,59 @@
 ---
-title: LingChat 文档
-description: LingChat v0.5 官方使用、创作、扩展与架构文档。
+layout: home
+
+hero:
+  name: "LingChat"
+  text: "灵动的沉浸式 AI-Galgame 伴侣系统"
+  tagline: "一个能记住你、懂你情绪、用声画相伴的高自由度虚拟恋人与剧情创作引擎。"
+  image:
+    src: /images/lingChat.png
+    alt: LingChat Hero
+  actions:
+    - theme: brand
+      text: 立即开始
+      link: /guide/quick-start
+    - theme: alt
+      text: 制作专属角色
+      link: /creator/character-creation
+    - theme: alt
+      text: 下载发行版
+      link: https://github.com/SlimeBoyOwO/LingChat/releases
+
+features:
+  - icon: 🧠
+    title: 独立存档与树状记忆
+    details: 每个存档保存独立的台词树、角色上下文与长期记忆，支持回溯与分支对话。
+  - icon: 💓
+    title: 情绪表现与动态立绘
+    details: 情绪分类驱动角色表情、动作、气泡与语音，让每次对话保持沉浸感。
+  - icon: 🎧
+    title: 本地与外置 TTS
+    details: 支持内置 Style-Bert-VITS2/ONNX 引擎及多种外置语音服务。
+  - icon: 👀
+    title: 主动陪伴与视觉感知
+    details: 可结合日程、活动状态和用户授权的屏幕感知，发起符合场景的互动。
+  - icon: 📜
+    title: 多角色剧本与羁绊
+    details: 支持分支剧情、事件演出、成就和 AI 自由对话注入。
+  - icon: 🛠️
+    title: Skills、插件与工具调用
+    details: 通过可视化剧本编辑器、Skill Agent、Function Calling 与插件扩展创作能力。
 ---
 
-# 🐈✨ LingChat 官方文档
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <CharacterShowcase />
 
-LingChat 是一款沉浸式 AI-Galgame 聊天应用：角色可以通过记忆、情绪、语音、剧本和主动陪伴与你互动。
+  <HomeModules />
 
-<HomeModules />
+  <div class="border-t border-[var(--vp-c-divider)] pt-12">
+    <div class="text-center mb-8">
+      <h3 class="text-2xl font-bold text-[var(--vp-c-text-1)] mb-2">核心贡献者与致谢名单</h3>
+      <p class="text-xs text-[var(--vp-c-text-2)]">LingChat 是一场跨越二次元与前沿 AI 技术的开源探索，感谢每一位同行的开发者与创作者。</p>
+    </div>
+    <ContributorsPanel />
+  </div>
 
-## 当前能力
-
-| 模块 | 内容 |
-| --- | --- |
-| 🧠 存档与记忆 | 台词树、角色专属上下文与长期记忆。 |
-| 💓 沉浸交互 | 情绪立绘、语音、服装、触摸与桌宠模式。 |
-| 📜 剧本创作 | 多角色剧情、分支、成就与可视化剧本编辑器。 |
-| 🔌 开放扩展 | Function Calling、Skills 与 Python 插件。 |
-| 📱 多端体验 | Windows、Android、Linux 和 macOS 发行版。 |
-
-## 开始探索
-
-- [快速开始](/guide/quick-start)
-- [功能全景导览](/manual/overview)
-- [创作者工坊](/creator/character-creation)
-- [架构与设计](/design/backend-architecture)
-- [社区与贡献](/community/dev-process)
-
-::: info 文档来源
-本站最初从钦灵的 LingBlog 迁移；现已以 LingChat 当前 `main` 分支的源码和项目文档为准持续校准。历史实现不作为当前功能依据。
-:::
-
-<ContributorsPanel />
+  <div class="mt-10 text-center text-sm text-[var(--vp-c-text-2)]">
+    本站最初从钦灵的 LingBlog 迁移，现以 LingChat 当前 main 分支为准。<a href="/SOURCES">查看页面来源与版本矩阵</a>
+  </div>
+</div>

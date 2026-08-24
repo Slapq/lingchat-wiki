@@ -32,7 +32,7 @@
         <div>
           <div class="module-icon emerald-icon">🛠️</div>
           <h3 class="text-lg font-bold text-[var(--vp-c-text-1)] mb-2">架构设计与开源贡献</h3>
-          <p class="text-xs text-[var(--vp-c-text-2)] leading-relaxed mb-4">深入了解 Python 异步消费者流水线、Tauri 高性能内核、台词树构建器算法设计，参与领取星辉奖励 (CSP)。</p>
+          <p class="text-xs text-[var(--vp-c-text-2)] leading-relaxed mb-4">深入了解 Tauri + Rust 原生内核、台词树记忆与工具调用机制，参与 LingChat 的开源贡献。</p>
         </div>
         <a href="/design/backend-architecture" class="module-link">查阅系统架构规范 <span aria-hidden="true">→</span></a>
       </article>
