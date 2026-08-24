@@ -43,10 +43,7 @@ LingChat 的 **主动对话** 和 **桌面窥屏** 功能需要使用具备视�
 阿里云百炼（DashScope）为每位新用户提供大量免费 Token，非常适合用作视觉感知后端：
 
 1. 前往 [阿里云百炼控制台](https://bailian.console.aliyun.com/) 获取 API Key。
-2. 在 LingChat **日程 ➔ 主动对话设置** 中填入：
-   - **视觉模型 Base URL**：`https://dashscope.aliyuncs.com/compatible-mode/v1`
-   - **视觉模型名称**：`qwen-vl-plus` 或 `qwen-vl-max`
-   - **视觉 API Key**：填入百炼 API Key
+2. 在 LingChat **设置 ➔ 高级设置 ➔ 大模型管理** 中，新增或编辑一个支持图片输入的提供商，并将它分配为视觉模型角色（默认可跟随对话模型）。
 3. 保存后，在聊天中发送 `“看看我的桌面”` 即可测试截屏识别！
 </FancyCard>
 

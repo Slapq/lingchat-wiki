@@ -1,109 +1,49 @@
+---
+title: 安装与多平台部署
+description: LingChat v0.5 的发行版安装、运行时数据目录与多平台说明。
+---
+
 # 📦 安装与多平台部署
 
-LingChat 现已支持 **Windows 10/11**、**Android 手机端**、**Linux** 以及 **macOS** 平台。你可以根据自己的设备环境选择最佳的部署方式。
+LingChat 当前使用 **Tauri v2** 打包为原生应用，发行版以 [GitHub Releases](https://github.com/SlimeBoyOwO/LingChat/releases) 为准。它不是浏览器网页服务，不需要也不会启动 `localhost:8756` 一类的 Python Web 端口。
 
----
+## Windows
 
-## 💻 Windows 端安装指南
+1. 在 Releases 下载最新的 `LingChat vX.X.X.7z` 或安装程序。
+2. 解压或安装后运行 `LingChat.exe`。
+3. 若 Windows Defender 隔离了主程序，请在保护历史记录中确认后恢复并为安装目录添加排除项。
 
-### 方式一：一键安装包（推荐）
-1. 前往 [GitHub Releases](https://github.com/SlimeBoyOwO/LingChat/releases) 下载最新的 `LingChat.Setup.exe` 安装文件。
-2. 双击运行安装向导，按照提示选择安装路径（建议安装至全英文路径，如 `D:\Program Files\LingChat`）。
-3. 安装完成后，桌面上将生成 LingChat 快捷方式，双击即可直接启动。
-
-### 方式二：免安装绿色版
-1. 在 Releases 页面下载 `LingChat-vX.X.X-windows.7z`。
-2. 使用 7-Zip 或 Bandizip 等解压软件解压至任意目录。
-3. 双击根目录下的 `LingChat.exe` 即可运行。
-
-::: tip 💡 运行依赖检查
-- 确保系统为 **Windows 10 (1903+)** 或 **Windows 11 64位**。
-- 如遇 DirectML 语音加速异常，请安装最新的显卡驱动程序与 DirectX 运行时组件。
+::: tip
+当前主线适用于 Windows 10 64 位及以上。老旧 32 位机器请使用 Releases 或 Issue 中标注的兼容版本。
 :::
 
----
+## Android
 
-## 📱 Android 手机端安装指南
+1. 下载对应的 APK 并按系统提示安装。
+2. 首次启动时，应用会把内置资源播种到应用数据目录。
+3. 手机与电脑处于同一局域网时，可使用应用内的局域网同步功能迁移数据。
 
-LingChat 提供了经过深度移动端优化的 Android 原生 APK：
+Android 使用 `data.zip` 处理 APK 资源中的中文文件名，首次解压完成前请不要中断应用。
 
-1. 在 Releases 页面中下载 `LingChat-vX.X.X.apk`。
-2. 传输至手机并允许“安装未知来源应用”。
-3. 首次安装打开后，应用会自动释放默认角色与基础素材包。
+## Linux 与 macOS
 
-::: warning 手机端首次启动贴士
-部分机型首次启动加载角色资源时，若出现黑屏或未见立绘，**只需将 App 从后台划掉后重新进入**，即可正常加载默认角色资产。
+Releases 提供 Linux 的 `deb`、`AppImage` 等包以及 macOS 的 DMG。Linux 运行前需满足发行版所需的 WebKitGTK 等系统依赖；具体包名随发行版而变。
+
+## 运行时数据
+
+桌面发行版默认将用户数据放在程序旁的 `data/`；开发模式使用项目根目录的 `data/`。Android 使用系统为应用分配的数据目录。
+
+```text
+data/
+├── game_data/
+│   ├── characters/  # 角色配置与立绘
+│   ├── scripts/     # 剧本
+│   ├── skills/      # Agent Skills
+│   └── plugins/     # 插件
+├── third_party/     # 内置第三方资源
+└── game_data.db     # SQLite 数据库
+```
+
+::: info 来源
+本页依据 LingChat 当前 `main` 的 `.github/README.md`、`docs/android/migration.md`、`src-tauri/src/init/static_copy.rs` 与 `src-tauri/tauri.conf.json` 整理。
 :::
-
-### 局域网数据同步
-手机端与电脑端处于同一 Wi-Fi 局域网下时，可通过高级设置中的 **局域网数据同步** 功能，一键在电脑与手机之间同步记忆存档、对话记录与角色卡。
-
----
-
-## 🐧 Linux & 🍎 macOS 部署
-
-LingChat 基于现代化的 Tauri + Web 架构，支持全主流 Unix 平台：
-
-### Linux (x86_64 / aarch64)
-1. 下载 `LingChat-vX.X.X-linux-amd64.tar.xz` 或 `AppImage`。
-2. 解压并赋予执行权限：
-   ```bash
-   tar -xvf LingChat-vX.X.X-linux-amd64.tar.xz
-   cd LingChat
-   chmod +x ling-chat
-   ./ling-chat
-   ```
-3. 确保系统已安装 WebKit2GTK 与基础多媒体解码器：
-   ```bash
-   # Ubuntu / Debian
-   sudo apt update && sudo apt install -y libwebkit2gtk-4.1-0 libsoup-3.0-0
-   # Arch Linux
-   sudo pacman -S webkit2gtk-4.1
-   ```
-
-### macOS (Apple Silicon / Intel)
-1. 下载 `.dmg` 安装镜像文件。
-2. 将 `LingChat.app` 拖入 `Applications` 应用程序文件夹。
-3. 若提示“无法打开，因为无法验证开发者”，前往 **系统设置 ➔ 隐私与安全性 ➔ 仍要打开** 即可。
-
----
-
-## 🌐 网页端模式 (Web Access)
-
-如果你运行的是 Python 后端内核版本，LingChat 会在本地启动一个高性能异步 Web 服务：
-
-- **默认访问端口**：`http://localhost:8756` 或 `http://localhost:8765`
-- **局域网跨设备访问**：在同一局域网下，其他设备通过 `http://<宿主机IP>:8756` 即可在手机或平板浏览器上享受完整立绘对话、触摸交互与语音回放！
-
----
-
-## 📂 核心目录架构与数据存放
-
-解压或安装后的标准目录规范如下：
-
-```
-LingChat/
-├── game_data/                 # 核心用户资产与数据
-│   ├── characters/            # 角色卡目录（钦灵、风雪及自定义 OC）
-│   │   ├── 诺一钦灵/
-│   │   │   ├── avatars/       # 20 类表情差分立绘
-│   │   │   └── settings.yml   # 角色人设、触摸点与语音配置
-│   │   └── 风雪/
-│   ├── scripts/               # 剧本与剧情包
-│   │   └── standalone/        # 独立 Galgame 剧本
-│   ├── skills/                # Agent Skills 拓展能力
-│   ├── plugins/               # 社区拓展插件
-│   └── game_database.db       # SQLite 核心记忆与台词数据库
-├── models/                    # 本地 AI 模型权重
-│   └── tts-local/             # ONNX 格式 Style-Bert-VITS2 语音模型
-└── LingChat.exe               # 客户端主程序
-```
-
----
-
-## ⚡ 国内高速镜像加速下载
-
-对于国内访问 GitHub Releases 较慢的用户，官方提供了多种镜像下载渠道：
-
-1. **[ModelScope (魔搭社区)](https://www.modelscope.cn/models/lingchat-research-studio/)**：官方权重与打包构建版本同步镜像，下载速度可达数十 MB/s。
-2. **GitHub Proxy 加速**：在 Release 下载链接前加上 `https://ghproxy.net/` 等公共加速前缀。

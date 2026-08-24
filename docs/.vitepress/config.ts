@@ -56,10 +56,12 @@ export default defineConfig({
         items: [
           { text: '功能全景导览', link: '/manual/overview' },
           { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
+          { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
           { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
           { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
           { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
-          { text: '记忆机制与双档回溯', link: '/manual/memory-archive' },
+          { text: '记忆与对话存档', link: '/manual/memory-archive' },
+          { text: '角色导入导出与归档', link: '/manual/role-archive' },
         ],
       },
       {
@@ -67,7 +69,9 @@ export default defineConfig({
         items: [
           { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
           { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
+          { text: '可视化剧本编辑器', link: '/creator/script-editor' },
           { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
+          { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
           { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
           { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
         ],
@@ -75,17 +79,19 @@ export default defineConfig({
       {
         text: '🏗️ 架构与设计',
         items: [
-          { text: '后端异步架构与消息流', link: '/design/backend-architecture' },
+          { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
           { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
-          { text: '0.4.0+ 统一游戏系统设计', link: '/design/unified-system' },
-          { text: '数据库 ER 与表结构设计', link: '/design/database-schema' },
+          { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
+          { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
           { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
+          { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
         ],
       },
       {
         text: '🌟 社区与贡献',
         items: [
           { text: '开发协作流程与规范', link: '/community/dev-process' },
+          { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
           { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
           { text: '核心贡献者墙与致谢', link: '/community/contributors' },
         ],
@@ -110,10 +116,12 @@ export default defineConfig({
           items: [
             { text: '功能全景导览', link: '/manual/overview' },
             { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
+            { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
             { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
             { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
             { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
-            { text: '记忆机制与双档回溯', link: '/manual/memory-archive' },
+            { text: '记忆与对话存档', link: '/manual/memory-archive' },
+            { text: '角色导入导出与归档', link: '/manual/role-archive' },
           ],
         },
       ],
@@ -123,7 +131,9 @@ export default defineConfig({
           items: [
             { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
             { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
+            { text: '可视化剧本编辑器', link: '/creator/script-editor' },
             { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
+            { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
             { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
             { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
           ],
@@ -133,11 +143,12 @@ export default defineConfig({
         {
           text: '🏗️ 架构与系统设计',
           items: [
-            { text: '后端异步架构与消息流', link: '/design/backend-architecture' },
+            { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
             { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
-            { text: '0.4.0+ 统一游戏系统设计', link: '/design/unified-system' },
-            { text: '数据库 ER 与表结构设计', link: '/design/database-schema' },
+            { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
+            { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
             { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
+            { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
           ],
         },
       ],
@@ -146,6 +157,7 @@ export default defineConfig({
           text: '🌟 社区生态与开源贡献',
           items: [
             { text: '开发协作流程与规范', link: '/community/dev-process' },
+            { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
             { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
             { text: '核心贡献者墙与致谢', link: '/community/contributors' },
           ],

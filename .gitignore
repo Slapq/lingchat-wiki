@@ -3,4 +3,5 @@ docs/.vitepress/cache/
 docs/.vitepress/dist/
 *.log
 validation.log
+%TEMP%/
 .DS_Store
