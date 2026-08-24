@@ -47,7 +47,9 @@ export default defineConfig({
         items: [
           { text: '快速开始指引', link: '/guide/quick-start' },
           { text: '安装与多平台部署', link: '/guide/installation' },
+          { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
           { text: '大模型与 API 配置', link: '/guide/llm-config' },
+          { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
           { text: '版本更新历程', link: '/guide/releases' },
         ],
       },
@@ -105,7 +107,9 @@ export default defineConfig({
           items: [
             { text: '快速开始指引', link: '/guide/quick-start' },
             { text: '安装与多平台部署', link: '/guide/installation' },
+            { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
             { text: '大模型与 API 配置', link: '/guide/llm-config' },
+            { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
             { text: '版本更新历程', link: '/guide/releases' },
           ],
         },
@@ -201,7 +205,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/SlimeBoyOwO/LingChat/edit/main/docs/:path',
+      pattern: 'https://github.com/Slapq/lingchat-wiki/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
 
