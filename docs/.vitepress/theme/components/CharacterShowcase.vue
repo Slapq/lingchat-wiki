@@ -15,17 +15,6 @@ interface Character {
 
 const characters: Character[] = [
   {
-    name: '诺一钦灵',
-    title: 'Slime Studio 看板娘',
-    subtitle: '元气 · 傲娇 · 黏人小狼娘',
-    description: 'LingChat 的第一位默认角色。有着毛茸茸的耳朵与敏锐的情绪反应，喜欢吃蛋糕和陪伴玩家工作，生气时会气鼓鼓地别过头去。',
-    tags: ['默认伴侣', '19种微表情', 'VITS专属音色', '全身触摸'],
-    avatar: '/images/qinling-avatar.png',
-    fullImage: '/images/hero-character.png',
-    quote: '【高兴】今天要不要一起吃蛋糕呀？（拿起蛋糕）这可是我存下来的钱买的，超好吃的哦！',
-    color: 'from-sky-500/20 via-indigo-500/20 to-pink-500/20',
-  },
-  {
     name: '风雪',
     title: '冷静猫娘 · 记忆仓库',
     subtitle: '优雅 · 高冷 · 细腻观察者',
