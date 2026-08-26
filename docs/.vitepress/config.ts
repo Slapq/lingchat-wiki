@@ -114,10 +114,11 @@ export default defineConfig({
       '/': [
         {
           text: '📖 使用指南',
-          collapsible: true,
+          collapsed: true,
           items: [
             {
               text: '🚀 入门与指引',
+              collapsed: true,
               items: [
                 { text: '快速开始指引', link: '/guide/quick-start' },
                 { text: '安装与多平台部署', link: '/guide/installation' },
@@ -129,6 +130,7 @@ export default defineConfig({
             },
             {
               text: '📖 玩法与功能手册',
+              collapsed: true,
               items: [
                 { text: '功能全景导览', link: '/manual/overview' },
                 { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
@@ -142,6 +144,7 @@ export default defineConfig({
             },
             {
               text: '🎨 创作者与工坊',
+              collapsed: true,
               items: [
                 { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
                 { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
@@ -156,10 +159,11 @@ export default defineConfig({
         },
         {
           text: '🛠️ 开发与贡献',
-          collapsible: true,
+          collapsed: true,
           items: [
             {
               text: '🏗️ 架构与系统设计',
+              collapsed: true,
               items: [
                 { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
                 { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
@@ -171,6 +175,7 @@ export default defineConfig({
             },
             {
               text: '🌟 社区生态与开源贡献',
+              collapsed: true,
               items: [
                 { text: '开发协作流程与规范', link: '/community/dev-process' },
                 { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
