@@ -220,3 +220,72 @@ body {
     color: #111827;
   }
 }
+
+/* ============================================================
+   Sidebar Hierarchy: 一级分区（板块）与二级分组视觉区分
+   ============================================================ */
+
+/* 一级分区：块状卡片标题，两个板块紧邻排列（无分割线、无间距） */
+.VPSidebar .VPSidebarItem.level-0 + .VPSidebarItem.level-0 {
+  margin-top: 0;
+}
+
+/* 覆盖默认主题 VPSidebarGroup 在分组间画的分割线与间距 */
+.VPSidebar .group + .group {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* 卡片右侧内边距 7px 与折叠箭头的 -7px 外边距抵消，
+   使卡片右边缘与箭头按钮右边缘齐平，避免右侧多出一截背景 */
+.VPSidebar .VPSidebarItem.level-0 > .item {
+  padding: 6px 7px 6px 8px;
+  border-radius: 10px;
+  background: var(--vp-c-bg-alt);
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* 暗色模式：卡片底色改用半透明白提亮，避免纯黑块 */
+:root.dark .VPSidebar .VPSidebarItem.level-0 > .item {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.VPSidebar .VPSidebarItem.level-0 > .item:hover {
+  background: var(--vp-c-brand-soft);
+}
+
+.VPSidebar .VPSidebarItem.level-0.has-active > .item,
+.VPSidebar .VPSidebarItem.level-0.is-active > .item {
+  background: var(--vp-c-brand-soft);
+}
+
+.VPSidebar .VPSidebarItem.level-0 > .item > .text {
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.VPSidebar .VPSidebarItem.level-0 > .item .caret-icon {
+  font-size: 20px;
+}
+
+/* 二级分组：次级标题 + 用内边距缩进（不缩行宽，右侧与卡片箭头保持对齐） */
+.VPSidebar .VPSidebarItem.level-1 > .item {
+  padding: 3px 0 3px 10px;
+}
+
+.VPSidebar .VPSidebarItem.level-1 > .item > .text {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.VPSidebar .VPSidebarItem.level-1 > .item .caret-icon {
+  font-size: 16px;
+}
+
+/* 二级分组下的链接：缩进线与分组标题文字对齐 */
+.VPSidebar .VPSidebarItem.level-1 > .items {
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 10px;
+  padding-left: 10px;
+}

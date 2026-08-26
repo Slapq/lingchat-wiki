@@ -114,7 +114,7 @@ export default defineConfig({
       '/': [
         {
           text: '📖 使用指南',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '🚀 入门与指引',
@@ -159,7 +159,7 @@ export default defineConfig({
         },
         {
           text: '🛠️ 开发与贡献',
-          collapsed: true,
+          collapsed: false,
           items: [
             {
               text: '🏗️ 架构与系统设计',
