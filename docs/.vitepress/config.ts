@@ -45,6 +45,7 @@ export default defineConfig({
       {
         text: '🚀 快速上手',
         items: [
+          { text: '下载与安装', link: '/guide/get-started' },
           { text: '快速开始指引', link: '/guide/quick-start' },
           { text: '安装与多平台部署', link: '/guide/installation' },
           { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
@@ -105,6 +106,7 @@ export default defineConfig({
         {
           text: '🚀 入门与指引',
           items: [
+            { text: '下载与安装', link: '/guide/get-started' },
             { text: '快速开始指引', link: '/guide/quick-start' },
             { text: '安装与多平台部署', link: '/guide/installation' },
             { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
