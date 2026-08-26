@@ -49,6 +49,25 @@ body {
   border-bottom: 1px solid var(--vp-c-divider) !important;
 }
 
+/* 顶部导航内层背景统一透明，避免默认主题的纯色块
+   （--vp-nav-bg-color）与毛玻璃叠加出两种颜色 */
+.VPNavBar:not(.home),
+.VPNavBar.screen-open {
+  background-color: transparent !important;
+}
+
+@media (min-width: 960px) {
+  /* 桌面端滚动后，右侧内容区也会被默认主题盖上纯色，一并透明化 */
+  .VPNavBar:not(.home.top) .content-body {
+    background-color: transparent !important;
+  }
+}
+
+/* 默认主题底部的细线（深色模式为纯黑）去掉，统一由 .VPNav 的 border-bottom 绘制 */
+.VPNavBar .divider-line {
+  background-color: transparent !important;
+}
+
 /* Translucent Glass Sidebar */
 .VPSidebar {
   backdrop-filter: blur(14px) saturate(180%) !important;
