@@ -230,6 +230,13 @@ body {
   .VPSidebar {
     backdrop-filter: none !important;
   }
+
+  /* 移动端必须移除 backdrop-filter：
+     backdrop-filter 会让 .VPNav 成为 position:fixed 的
+     .VPNavScreen（移动菜单）的包含块，导致菜单被压缩成 0 高度不显示 */
+  .VPNav {
+    backdrop-filter: none !important;
+  }
 }
 
 @media print {
