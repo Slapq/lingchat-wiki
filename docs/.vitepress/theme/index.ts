@@ -6,6 +6,7 @@ import ReleaseCard from './components/ReleaseCard.vue'
 import EventCatalog from './components/EventCatalog.vue'
 import CharacterShowcase from './components/CharacterShowcase.vue'
 import HomeModules from './components/HomeModules.vue'
+import NavSectionDropdown from './components/NavSectionDropdown.vue'
 import './styles/custom.css'
 import type { Theme } from 'vitepress'
 
@@ -19,5 +20,6 @@ export default {
     app.component('EventCatalog', EventCatalog)
     app.component('CharacterShowcase', CharacterShowcase)
     app.component('HomeModules', HomeModules)
+    app.component('NavSectionDropdown', NavSectionDropdown)
   },
 } satisfies Theme
