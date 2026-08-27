@@ -43,129 +43,158 @@ export default defineConfig({
     nav: [
       { text: '✨ 首页', link: '/' },
       {
-        text: '🚀 快速上手',
-        items: [
-          { text: '下载与安装', link: '/guide/get-started' },
+        component: 'NavSectionDropdown',
+        props: {
+          text: '📖 使用指南',
+          link: '/guide/quick-start',
+          match: ['guide', 'manual', 'creator'],
+          items: [
+            {
+              text: '🚀 快速上手',
+              items: [
+                { text: '下载与安装', link: '/guide/get-started' },
           { text: '快速开始指引', link: '/guide/quick-start' },
-          { text: '安装与多平台部署', link: '/guide/installation' },
-          { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
-          { text: '大模型与 API 配置', link: '/guide/llm-config' },
-          { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
-          { text: '版本更新历程', link: '/guide/releases' },
-        ],
+                { text: '安装与多平台部署', link: '/guide/installation' },
+                { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
+                { text: '大模型与 API 配置', link: '/guide/llm-config' },
+                { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
+                { text: '版本更新历程', link: '/guide/releases' },
+              ],
+            },
+            {
+              text: '📖 功能手册',
+              items: [
+                { text: '功能全景导览', link: '/manual/overview' },
+                { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
+                { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
+                { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
+                { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
+                { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
+                { text: '记忆与对话存档', link: '/manual/memory-archive' },
+                { text: '角色导入导出与归档', link: '/manual/role-archive' },
+              ],
+            },
+            {
+              text: '🎨 创作者工坊',
+              items: [
+                { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
+                { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
+                { text: '可视化剧本编辑器', link: '/creator/script-editor' },
+                { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
+                { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
+                { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
+                { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
+              ],
+            },
+          ],
+        },
       },
       {
-        text: '📖 功能手册',
-        items: [
-          { text: '功能全景导览', link: '/manual/overview' },
-          { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
-          { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
-          { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
-          { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
-          { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
-          { text: '记忆与对话存档', link: '/manual/memory-archive' },
-          { text: '角色导入导出与归档', link: '/manual/role-archive' },
-        ],
-      },
-      {
-        text: '🎨 创作者工坊',
-        items: [
-          { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
-          { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
-          { text: '可视化剧本编辑器', link: '/creator/script-editor' },
-          { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
-          { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
-          { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
-          { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
-        ],
-      },
-      {
-        text: '🏗️ 架构与设计',
-        items: [
-          { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
-          { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
-          { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
-          { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
-          { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
-          { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
-        ],
-      },
-      {
-        text: '🌟 社区与贡献',
-        items: [
-          { text: '开发协作流程与规范', link: '/community/dev-process' },
-          { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
-          { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
-          { text: '核心贡献者墙与致谢', link: '/community/contributors' },
-        ],
+        component: 'NavSectionDropdown',
+        props: {
+          text: '🛠️ 开发与贡献',
+          link: '/design/backend-architecture',
+          match: ['design', 'community'],
+          items: [
+            {
+              text: '🏗️ 架构与设计',
+              items: [
+                { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
+                { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
+                { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
+                { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
+                { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
+                { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
+              ],
+            },
+            {
+              text: '🌟 社区与贡献',
+              items: [
+                { text: '开发协作流程与规范', link: '/community/dev-process' },
+                { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
+                { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
+                { text: '核心贡献者墙与致谢', link: '/community/contributors' },
+              ],
+            },
+          ],
+        },
       },
     ],
 
     sidebar: {
-      '/guide/': [
+      '/': [
         {
-          text: '🚀 入门与指引',
+          text: '📖 使用指南',
+          collapsed: false,
           items: [
-            { text: '下载与安装', link: '/guide/get-started' },
+            {
+              text: '🚀 入门与指引',
+              collapsed: true,
+              items: [
+                { text: '下载与安装', link: '/guide/get-started' },
             { text: '快速开始指引', link: '/guide/quick-start' },
-            { text: '安装与多平台部署', link: '/guide/installation' },
-            { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
-            { text: '大模型与 API 配置', link: '/guide/llm-config' },
-            { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
-            { text: '版本更新历程', link: '/guide/releases' },
+                { text: '安装与多平台部署', link: '/guide/installation' },
+                { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
+                { text: '大模型与 API 配置', link: '/guide/llm-config' },
+                { text: '社区支持与故障排查', link: '/guide/troubleshooting' },
+                { text: '版本更新历程', link: '/guide/releases' },
+              ],
+            },
+            {
+              text: '📖 玩法与功能手册',
+              collapsed: true,
+              items: [
+                { text: '功能全景导览', link: '/manual/overview' },
+                { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
+                { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
+                { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
+                { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
+                { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
+                { text: '记忆与对话存档', link: '/manual/memory-archive' },
+                { text: '角色导入导出与归档', link: '/manual/role-archive' },
+              ],
+            },
+            {
+              text: '🎨 创作者与工坊',
+              collapsed: true,
+              items: [
+                { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
+                { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
+                { text: '可视化剧本编辑器', link: '/creator/script-editor' },
+                { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
+                { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
+                { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
+                { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
+              ],
+            },
           ],
         },
-      ],
-      '/manual/': [
         {
-          text: '📖 玩法与功能手册',
+          text: '🛠️ 开发与贡献',
+          collapsed: false,
           items: [
-            { text: '功能全景导览', link: '/manual/overview' },
-            { text: '本地/外置 TTS 语音引擎', link: '/manual/tts-engine' },
-            { text: '推理设备与 GPU 选择', link: '/manual/inference-devices' },
-            { text: '主动对话与屏幕感知', link: '/manual/proactive-companion' },
-            { text: '日程·待办·番茄钟', link: '/manual/schedule-todo' },
-            { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
-            { text: '记忆与对话存档', link: '/manual/memory-archive' },
-            { text: '角色导入导出与归档', link: '/manual/role-archive' },
-          ],
-        },
-      ],
-      '/creator/': [
-        {
-          text: '🎨 创作者与工坊',
-          items: [
-            { text: '角色卡制作与触摸配置', link: '/creator/character-creation' },
-            { text: '剧本编写与演出指南', link: '/creator/script-tutorial' },
-            { text: '可视化剧本编辑器', link: '/creator/script-editor' },
-            { text: '剧本事件语法速查大全', link: '/creator/script-events-ref' },
-            { text: 'Python 插件开发指南', link: '/creator/plugin-development' },
-            { text: 'Style-Bert-VITS2 训练教程', link: '/creator/vits-training' },
-            { text: '创意工坊投稿规范', link: '/creator/workshop-publishing' },
-          ],
-        },
-      ],
-      '/design/': [
-        {
-          text: '🏗️ 架构与系统设计',
-          items: [
-            { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
-            { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
-            { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
-            { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
-            { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
-            { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
-          ],
-        },
-      ],
-      '/community/': [
-        {
-          text: '🌟 社区生态与开源贡献',
-          items: [
-            { text: '开发协作流程与规范', link: '/community/dev-process' },
-            { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
-            { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
-            { text: '核心贡献者墙与致谢', link: '/community/contributors' },
+            {
+              text: '🏗️ 架构与系统设计',
+              collapsed: true,
+              items: [
+                { text: 'Tauri + Rust 后端架构', link: '/design/backend-architecture' },
+                { text: '前端事件驱动与模块解耦', link: '/design/frontend-architecture' },
+                { text: '统一游戏状态与存档设计', link: '/design/unified-system' },
+                { text: 'SQLite 数据库与表结构', link: '/design/database-schema' },
+                { text: 'LLM 记忆构建器算法', link: '/design/memory-builder' },
+                { text: 'AI 工具调用 (Function Calling)', link: '/design/function-call' },
+              ],
+            },
+            {
+              text: '🌟 社区生态与开源贡献',
+              collapsed: true,
+              items: [
+                { text: '开发协作流程与规范', link: '/community/dev-process' },
+                { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
+                { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
+                { text: '核心贡献者墙与致谢', link: '/community/contributors' },
+              ],
+            },
           ],
         },
       ],
