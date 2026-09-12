@@ -46,13 +46,15 @@ export default defineConfig({
         component: 'NavSectionDropdown',
         props: {
           text: '📖 使用指南',
-          link: '/guide/quick-start',
+          link: '/guide/get-started',
           match: ['guide', 'manual', 'creator'],
           items: [
             {
               text: '🚀 快速上手',
               items: [
-                { text: '快速开始指引', link: '/guide/quick-start' },
+                { text: '下载与安装', link: '/guide/get-started' },
+                { text: '第一次游玩', link: '/guide/quick-start' },
+                { text: '让角色说话', link: '/guide/easy-tts' },
                 { text: '安装与多平台部署', link: '/guide/installation' },
                 { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
                 { text: '大模型与 API 配置', link: '/guide/llm-config' },
@@ -130,7 +132,9 @@ export default defineConfig({
               text: '🚀 入门与指引',
               collapsed: true,
               items: [
-                { text: '快速开始指引', link: '/guide/quick-start' },
+                { text: '下载与安装', link: '/guide/get-started' },
+                { text: '第一次游玩', link: '/guide/quick-start' },
+                { text: '让角色说话', link: '/guide/easy-tts' },
                 { text: '安装与多平台部署', link: '/guide/installation' },
                 { text: 'Android 运行机制与资源包', link: '/guide/android-resources' },
                 { text: '大模型与 API 配置', link: '/guide/llm-config' },
