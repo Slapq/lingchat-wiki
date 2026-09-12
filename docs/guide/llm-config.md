@@ -14,11 +14,13 @@ LingChat 能够表现出灵动、生动的陪伴感，核心在于通过结构�
 
 | 提供商 | Base URL (接口地址) | 推荐模型名 | 适用场景与特点 |
 | :--- | :--- | :--- | :--- |
-| **DeepSeek (推荐)** | `https://api.deepseek.com` | `deepseek-chat` | 性价比极高，二次元语感生动，支持复杂指令 |
+| **DeepSeek (推荐)** | `https://api.deepseek.com` | `deepseek-v4-flash` / `deepseek-v4-pro` | 性价比极高，二次元语感生动，支持复杂指令 |
 | **阿里云百炼 / 通义** | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen-plus` / `qwen-max` | 官方额度充裕，响应极快，长上下文稳定 |
 | **Moonshot / Kimi** | `https://api.moonshot.cn/v1` | `moonshot-v1-8k` / `moonshot-v1-32k` | 超长记忆维持，推理与剧情连贯 |
 | **OpenAI / 兼容代理** | `https://api.openai.com/v1` | `gpt-4o-mini` / `gpt-4o` | 通用能力强，支持复杂 Function Calling |
 | **Ollama (本地私有)** | `http://localhost:11434/v1` | `qwen2.5:7b` / `deepseek-r1:8b` | 完全离线无审查，需电脑具备 6GB+ 显存 |
+
+> 也可以直接用「添加模型」里的预设按钮（如「DeepSeek V4 Flash」「DeepSeek V4 Pro」）一键填充名称、模型名与 API 地址，再粘贴自己的 API Key 即可。
 
 ---
 

@@ -9,8 +9,8 @@ LingChat 当前使用 **Tauri v2** 打包为原生应用，发行版以 [GitHub 
 
 ## Windows
 
-1. 在 Releases 下载最新的 `LingChat vX.X.X.7z` 或安装程序。
-2. 解压或安装后运行 `LingChat.exe`。
+1. 在 Releases 下载最新的 Windows 安装程序（`LingChat_<版本>_x64-setup.exe`）。
+2. 运行安装程序完成安装，然后启动 `LingChat.exe`。
 3. 若 Windows Defender 隔离了主程序，请在保护历史记录中确认后恢复并为安装目录添加排除项。
 
 ::: tip

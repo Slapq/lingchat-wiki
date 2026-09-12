@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 立即开始
-      link: /guide/quick-start
+      link: /guide/get-started
     - theme: alt
       text: 制作专属角色
       link: /creator/character-creation
