@@ -54,6 +54,6 @@ features:
   </div>
 
   <div class="mt-10 text-center text-sm text-[var(--vp-c-text-2)]">
-    本站最初从钦灵的 LingBlog 迁移，现以 LingChat 当前 main 分支为准。<a href="/SOURCES">查看页面来源与版本矩阵</a>
+    本站最初从钦灵的 LingBlog 迁移，现以 LingChat 当前 main 分支为准。<a href="/community/sources">查看页面来源与版本矩阵</a>
   </div>
 </div>

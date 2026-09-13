@@ -112,6 +112,7 @@ export default defineConfig({
               text: '🌟 社区与贡献',
               items: [
                 { text: '开发协作流程与规范', link: '/community/dev-process' },
+                { text: '文档来源与版本矩阵', link: '/community/sources' },
                 { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
                 { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
                 { text: '核心贡献者墙与致谢', link: '/community/contributors' },
@@ -192,6 +193,7 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { text: '开发协作流程与规范', link: '/community/dev-process' },
+                { text: '文档来源与版本矩阵', link: '/community/sources' },
                 { text: '界面国际化 (i18n) 开发指南', link: '/community/i18n-guide' },
                 { text: '星辉激励机制 (CSP 奖励)', link: '/community/bounty-program' },
                 { text: '核心贡献者墙与致谢', link: '/community/contributors' },

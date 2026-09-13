@@ -82,7 +82,7 @@ description: LingChat Wiki 页面与上游事实来源的可追溯映射。
 | `community/i18n-guide.md` | 技术摘要 | `docs/i18n.md`、`src/locales/` |
 | `community/bounty-program.md` | 原文迁移，已复核 | LingBlog `docs/projects/ling-chat/` 与当前项目社区规则 |
 | `community/contributors.md` | Wiki 自有页面 | `data/contributors.json` |
-| `SOURCES.md` | Wiki 自有页面 | 本文件与上述上游基线 |
+| `community/sources.md` | Wiki 自有页面 | 本文件与上述上游基线 |
 
 ## 维护规则
 
