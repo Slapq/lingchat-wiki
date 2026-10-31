@@ -3,7 +3,7 @@
 本页面完整记录了 LingChat 从孵化至今的各个重大版本发布与架构演进里程碑。
 
 <ReleaseCard
-  version="v0.5.3"
+  version="v0.6.0"
   date="2026"
   title="动态 Live2D · 自定义摸摸 · MC 女仆联动 · TODO 增强 · 语音聊天 · 自动纠错"
   badge="New Release"
