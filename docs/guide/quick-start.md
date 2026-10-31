@@ -1,6 +1,6 @@
 ---
 title: 第一次游玩
-description: 在 LingChat v0.5 中配置大模型 API Key 并开始第一次对话。
+description: 在 LingChat v0.6 中配置大模型 API Key 并开始第一次对话。
 ---
 
 # 第一次游玩

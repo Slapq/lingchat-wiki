@@ -73,6 +73,7 @@ export default defineConfig({
                 { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
                 { text: '记忆与对话存档', link: '/manual/memory-archive' },
                 { text: '角色导入导出与归档', link: '/manual/role-archive' },
+                { text: '插件安装与使用', link: '/manual/plugin-usage' },
               ],
             },
             {
@@ -155,6 +156,7 @@ export default defineConfig({
                 { text: 'LingPal 桌面宠物模式', link: '/manual/lingpal-desktop-pet' },
                 { text: '记忆与对话存档', link: '/manual/memory-archive' },
                 { text: '角色导入导出与归档', link: '/manual/role-archive' },
+                { text: '插件安装与使用', link: '/manual/plugin-usage' },
               ],
             },
             {

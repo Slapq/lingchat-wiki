@@ -7,6 +7,8 @@ description: 在 LingChat 受限运行时中声明并实现扩展工具。
 
 插件位于 `data/plugins/<id>/`，通过 `manifest.toml` 声明可供 AI 调用的工具，再使用 Python 实现 `run(ctx)`。
 
+> 只想知道怎么装、怎么开、见 [插件安装与使用指南](/manual/plugin-usage)。
+
 ## 最小结构
 
 ```text
