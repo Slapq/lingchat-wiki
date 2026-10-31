@@ -22,7 +22,7 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
     config: (md) => {
-      md.use(mathjax3 as any)
+      md.use(mathjax3)
     },
     headers: {
       level: [2, 3, 4],
