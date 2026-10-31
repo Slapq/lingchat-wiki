@@ -25,6 +25,7 @@ LingChat 是运行在 Tauri 原生应用中的 AI-Galgame 陪伴系统。每个�
 - [角色卡制作](/creator/character-creation)
 - [剧本创作](/creator/script-tutorial)
 - [角色导入导出](/manual/role-archive)
+- [插件安装与使用](/manual/plugin-usage)
 
 ::: info
 本页描述当前 v0.5 能力；旧版博客中“RAG 网页端”“独立桌宠进程”等表述不适用于当前应用。
