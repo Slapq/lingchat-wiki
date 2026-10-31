@@ -45,15 +45,15 @@ features:
 
   <HomeModules />
 
-  <div class="border-t border-[var(--vp-c-divider)] pt-12">
+  <div class="border-t border-(--vp-c-divider) pt-12">
     <div class="text-center mb-8">
-      <h3 class="text-2xl font-bold text-[var(--vp-c-text-1)] mb-2">核心贡献者与致谢名单</h3>
-      <p class="text-xs text-[var(--vp-c-text-2)]">LingChat 是一场跨越二次元与前沿 AI 技术的开源探索，感谢每一位同行的开发者与创作者。</p>
+      <h3 class="text-2xl font-bold text-(--vp-c-text-1) mb-2">核心贡献者与致谢名单</h3>
+      <p class="text-xs text-(--vp-c-text-2)">LingChat 是一场跨越二次元与前沿 AI 技术的开源探索，感谢每一位同行的开发者与创作者。</p>
     </div>
     <ContributorsPanel />
   </div>
 
-  <div class="mt-10 text-center text-sm text-[var(--vp-c-text-2)]">
+  <div class="mt-10 text-center text-sm text-(--vp-c-text-2)">
     本站最初从钦灵的 LingBlog 迁移，现以 LingChat 当前 main 分支为准。<a href="/community/sources">查看页面来源与版本矩阵</a>
   </div>
 </div>

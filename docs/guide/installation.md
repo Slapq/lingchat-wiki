@@ -38,8 +38,8 @@ data/
 ├── game_data/
 │   ├── characters/  # 角色配置与立绘
 │   ├── scripts/     # 剧本
-│   ├── skills/      # Agent Skills
-│   └── plugins/     # 插件
+│   └── skills/      # Agent Skills
+├── plugins/         # 插件（每个插件一个目录）
 ├── third_party/     # 内置第三方资源
 └── game_data.db     # SQLite 数据库
 ```
